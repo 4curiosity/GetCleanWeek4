@@ -11,6 +11,7 @@
 #######################################
 setwd("F:/Tom/R/DataScienceCourse/Final/Working/UCI HAR Dataset")
 require(dplyr)
+require(plyr)
 require(stringr)
 #######################################
 #   read test subject file
@@ -54,6 +55,7 @@ rm(tr);rm(tr2);rm(tr3);rm(tr4)
 test <- read.csv(file = "./test/X-test_flat.txt", header = FALSE, sep = "\t")
 #   read from cleaned up train tmp file
 train <- read.csv(file = "./train/X-train_flat.txt", header = FALSE, sep = "\t")
+activitiyLabels <- read.csv(file = "activity_labels.txt", header = FALSE, sep = " ")
 
 features <- read.csv(file = "features.txt", header = FALSE, sep = " ")
 myFeaturesCols <- features[grepl("(mean|std)", features$V2),]
@@ -80,8 +82,15 @@ labels <- paste(myFeatures, sep = ",")
 myLabels <- c("subject", "activity", labels)
 
 colnames(combined) <- myLabels
+
+# update values with correct activity names
+
+combined[, 2] <- activitiyLabels[combined[, 2], 2]
+
 write.csv(combined, file = "run_analysis_results.csv")
 #   Task 5
-myMeans <- grepl("(mean)", colnames(combined))
-myMeanData <- combined[, myMeans]
+
+#
+myMeanData <- ddply(combined, .(subject, activity), function(x) colMeans(x[, 3:81]))
+
 write.csv(myMeanData, file = "myMeanData.csv")

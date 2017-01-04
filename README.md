@@ -51,8 +51,3 @@ Use of this dataset in publications must be acknowledged by referencing the foll
 This dataset is distributed AS-IS and no responsibility implied or explicit can be addressed to the authors or their institutions for its use or misuse. Any commercial use is prohibited.
 
 Jorge L. Reyes-Ortiz, Alessandro Ghio, Luca Oneto, Davide Anguita. November 2012.
-
-Only this readme file and the run_analysis.R script are uploaded to Git hub to save a bunch of space.
-But running the script on the quiz input files produces my answers in csv file:
-run_analysis_results.csv for tasks 1 through 4
-myMeanData.csv for task 5

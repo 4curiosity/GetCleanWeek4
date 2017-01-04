@@ -17,11 +17,11 @@ activity - activity type of each activity in the study, in string format (WALKIN
 - preserved variable names from the original UCI HAR Dataset that include the keywords "mean" or "std.
 Trasformations from Original Dataset
 
-Merge the training and the test sets to create one data set.
-Extracts only the measurements on the mean and standard deviation for each measurement.
-Uses descriptive activity names to name the activities in the data set (The labels in the dataset activity_labels.txt)
-Appropriately labels the data set with descriptive variable names.
-From the data set in step 4, creates a second, independent tidy data set with the average of each variable for each activity and each subject.
-The step 4 dataset is "run_analysis_results.csv", and the step 5 dataset is "myMeanData.csv".
+1   Merge the training and the test sets to create one data set.
+2   Extracts only the measurements on the mean and standard deviation for each measurement.
+3   Uses descriptive activity names to name the activities in the data set (The labels in the dataset activity_labels.txt)
+4   Appropriately labels the data set with descriptive variable names.
+5   From the data set in step 4, creates a second, independent tidy data set with the average of each variable for each activity and each subject.
+The step 4 dataset is "run_analysis_results.csv", and the step 5 dataset is "myMeanData.txt".
 
 All column names from X-test.txt and X-train.txt are set to lower case and non-characters were eliminated - parens, dashes and spaces
