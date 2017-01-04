@@ -92,5 +92,5 @@ write.csv(combined, file = "run_analysis_results.csv")
 
 #
 myMeanData <- ddply(combined, .(subject, activity), function(x) colMeans(x[, 3:81]))
-
-write.csv(myMeanData, file = "myMeanData.csv")
+write.table(myMeanData, file = "Task5.csv", row.names = FALSE, col.names = TRUE)
+#write.csv(myMeanData, file = "myMeanData.csv")
