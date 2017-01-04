@@ -22,6 +22,6 @@ Trasformations from Original Dataset
 3   Uses descriptive activity names to name the activities in the data set (The labels in the dataset activity_labels.txt)
 4   Appropriately labels the data set with descriptive variable names.
 5   From the data set in step 4, creates a second, independent tidy data set with the average of each variable for each activity and each subject.
-The step 4 dataset is "run_analysis_results.csv", and the step 5 dataset is "myMeanData.txt".
+The step 5 dataset is "Task5.csv".
 
 All column names from X-test.txt and X-train.txt are set to lower case and non-characters were eliminated - parens, dashes and spaces
