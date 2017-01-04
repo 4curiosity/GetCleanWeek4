@@ -91,6 +91,6 @@ write.csv(combined, file = "run_analysis_results.csv")
 #   Task 5
 
 #
-myMeanData <- ddply(combined, .(subject, activity), function(x) colMeans(x[, 3:81]))
-write.table(myMeanData, file = "Task5.csv", row.names = FALSE, col.names = TRUE)
+Task5 <- ddply(combined, .(subject, activity), function(x) colMeans(x[, 3:81]))
+write.table(Task5, file = "Task5.csv", row.names = FALSE, col.names = TRUE)
 #write.csv(myMeanData, file = "myMeanData.csv")
